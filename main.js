@@ -14,8 +14,11 @@ window.onload = function () {
     canvas.addEventListener('mouseup', mouseUp, false);
     canvas.addEventListener('mouseout', mouseUp, false);
     canvas.addEventListener('mousemove', throttle(mouseMove, 10), false);
-
+    
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
     window.addEventListener('resize', resize, false);
+
     resize();
 
     function drawLine(x0, y0, x1, y1, color) {
@@ -62,8 +65,12 @@ window.onload = function () {
 
     // resize canvas to fill browser
     function resize() {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
+        context.putImageData();
+        context.getImageData();
     }
+
+
+
+
 
 }
