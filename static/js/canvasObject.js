@@ -5,6 +5,7 @@ class Canvas {
     }
 
     createId(){
+        // creates random 6-digit number
         this.id = Math.floor(100000 + Math.random() * 900000);
     }
 }
